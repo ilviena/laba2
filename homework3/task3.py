@@ -2,9 +2,9 @@ from datetime import datetime
 
 def calc_age():
     while True:
-        birthday_str = input("Введите дату рождения дд.мм.гггг: ")
+        birthday_str = input("Введите дату рождения дд/мм/гггг: ")
         
-        if len(birthday_str) == 10 and birthday_str[2] == '.' and birthday_str[5] == '.':
+        if len(birthday_str) == 10 and birthday_str[2] == '/' and birthday_str[5] == '/':
             day = int(birthday_str[:2])
             month = int(birthday_str[3:5])
             year = int(birthday_str[6:])
@@ -24,7 +24,7 @@ def calc_age():
             else:
                 print("Неверный месяц!")
         else:
-            print("Неверный ввод! Формат должен быть дд.мм.гггг")
+            print("Неверный ввод! Формат должен быть дд/мм/гггг")
 
     birthday = datetime(year, month, day)
     today = datetime.now()
